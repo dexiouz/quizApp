@@ -8,6 +8,7 @@ import {styles} from './styles';
 import theme from '../../../config/theme';
 const Home = ({navigation}) => {
   const dispatch = useDispatch();
+  // on mount, get the quizes from the api and store in redux
   useEffect(() => {
     dispatch(getQuiz());
   }, []);

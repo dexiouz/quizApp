@@ -11,6 +11,7 @@ const Results = ({route, navigation}) => {
   const dispatch = useDispatch();
   const results = useSelector((state) => state.results);
   const {numberOfQuestions, questions} = results;
+
   const handleReset = () => {
     const payload = {
       score: 0,
@@ -20,10 +21,11 @@ const Results = ({route, navigation}) => {
     dispatch(resetQuiz(payload));
     navigation.navigate('Home');
   }; 
+  
   return (
     <View style={styles.container}>
       <Text style={styles.text}>
-        {/* Lol, this is not the best way to calculate % unless when the length is always 10, but, oh well, just trying out creativity and workarounds */}
+        {/* Lol, this is not the best way to calculate percentage(%) unless when the length is always 10, but, oh well, just trying out creativity and workarounds */}
         You scored {score} out of {numberOfQuestions} questions {numberOfQuestions === 10 ? `${score}0%` : null} 
       </Text>
       <ScrollView showsVerticalScrollIndicator={false}>
