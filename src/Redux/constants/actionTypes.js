@@ -1,0 +1,3 @@
+export const UPDATE_QUIZ_RESULTS = "UPDATE_QUIZ_RESULTS "
+export const RESET_QUIZ = "RESET_QUIZ "
+export const FETCH_QUIZ = "FETCH_QUIZ"
